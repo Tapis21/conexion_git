@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Shell
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MiAgendaEscolar.Pages"
+    Title="MiAgendaEscolar"
+    x:Class="MiAgendaEscolar.AppShell">
+
+    
+
+    <FlyouItem Title="Inicio" Icon="home.png">
+        <ShellContent ContentTemplate="{DataTemplate local:InicioPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Materias" Icon="book.png">
+        <ShellContent ContentTemplate="{DataTemplate local:MateriasPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Tareas" Icon="checklist.png">
+        <ShellContent ContentTemplate="{DataTemplate local:TareasPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Calendario" Icon="calendar.png">
+        <ShellContent ContentTemplate="{DataTemplate local:CalendarioPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Notas" Icon="note.png">
+        <ShellContent ContentTemplate="{DataTemplate local:NotasPage}" />
+    </FlyoutItem>
+</Shell>
