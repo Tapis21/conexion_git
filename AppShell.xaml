@@ -5,9 +5,7 @@
     xmlns:local="clr-namespace:MiAgendaEscolar.Pages"
     Title="MiAgendaEscolar"
     x:Class="MiAgendaEscolar.AppShell">
-
     
-
     <FlyouItem Title="Inicio" Icon="home.png">
         <ShellContent ContentTemplate="{DataTemplate local:InicioPage}" />
     </FlyoutItem>
