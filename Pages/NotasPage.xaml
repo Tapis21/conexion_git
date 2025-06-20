@@ -2,10 +2,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MiAgendaEscolar.Pages.NotasPage"
              Title="Notas">
-    <StackLayout Padding="20">
-        <Label Text="Página: Notas"
+
+    <StackLayout Padding="20" Spacing="15">
+
+        <Label Text="Escribe una nota rápida"
                FontSize="24"
-               HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand" />
+               HorizontalOptions="Center" />
+
+        <Editor x:Name="NotaEditor"
+                Placeholder="Escribe tu nota aquí..."
+                AutoSize="TextChanges"
+                HeightRequest="200"
+                BackgroundColor="#f0f0f0"
+                TextColor="Black" />
+
+        <Button Text="Guardar nota"
+                Clicked="GuardarNota_Clicked"
+                BackgroundColor="#3F51B5"
+                TextColor="White"
+                CornerRadius="10"
+                HorizontalOptions="Fill" />
+
+        <Label Text="Última nota guardada:"
+               FontSize="18"
+               Margin="10,20,0,0" />
+
+        <Label x:Name="NotaMostrada"
+               FontSize="16"
+               TextColor="Gray" />
+
     </StackLayout>
 </ContentPage>
+
