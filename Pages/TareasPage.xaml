@@ -2,10 +2,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MiAgendaEscolar.Pages.TareasPage"
              Title="Tareas">
-    <StackLayout Padding="20">
-        <Label Text="Página: Tareas"
+    <StackLayout Padding="20" Spacing="15">
+
+        <Label Text="Tareas pendientes"
                FontSize="24"
-               HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand" />
+               HorizontalOptions="Center" />
+
+        <!-- Lista de tareas -->
+        <CollectionView x:Name="TareasList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="#888" CornerRadius="12" Padding="10" Margin="5">
+                        <StackLayout>
+                            <Label Text="{Binding Titulo}" FontSize="18" />
+                            <Label Text="{Binding Materia}" FontSize="14" TextColor="Gray" />
+                            <Label Text="{Binding FechaEntrega}" FontSize="12" TextColor="#888" />
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Text="Agregar tarea"
+                Clicked="AgregarTarea_Clicked"
+                BackgroundColor="#FF9800"
+                TextColor="White"
+                CornerRadius="10"
+                HorizontalOptions="Fill" />
     </StackLayout>
 </ContentPage>

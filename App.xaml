@@ -3,4 +3,25 @@
              x:Class="MiAgendaEscolar.App">
 
             <!-- Se pueden agregar estilos -->
+
+    <Application.Resources>
+        <!-- 🎨 Colores principales -->
+        <Color x:Key="PrimaryColor">#1976D2</Color>
+        <Color x:Key="AccentColor">#FFC107</Color>
+
+        <!-- 🧱 Estilo global para botones -->
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="FontAttributes" Value="Bold" />
+        </Style>
+
+        <!-- 🏷️ Estilo para títulos -->
+        <Style TargetType="Label" x:Key="TitleLabel">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="TextColor" Value="#333" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+        </Style>
+    </Application.Resources>
 </Application>

@@ -2,10 +2,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MiAgendaEscolar.Pages.MateriasPage"
              Title="Materias">
-    <StackLayout Padding="20">
-        <Label Text="Página: Materias"
+
+    <StackLayout Padding="20" Spacing="15">
+
+        <Label Text="Tus materias registradas"
                FontSize="24"
-               HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand" />
+               HorizontalOptions="Center" />
+
+        <!-- Lista de materias simulada -->
+        <CollectionView x:Name="MateriasList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="#ccc" CornerRadius="12" Padding="10" Margin="5">
+                        <StackLayout>
+                            <Label Text="{Binding Nombre}" FontSize="18" />
+                            <Label Text="{Binding Profesor}" FontSize="14" TextColor="Gray" />
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Text="Agregar materia"
+                Clicked="AgregarMateria_Clicked"
+                BackgroundColor="#4CAF50"
+                TextColor="White"
+                CornerRadius="10"
+                HorizontalOptions="Fill" />
+
     </StackLayout>
 </ContentPage>
